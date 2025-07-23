@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Page</title>
+  <link rel = "stylesheet" href = "./signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- we need an outer div because the div that has left-outer causes it to be removed from document flow --> 
+  <!-- therefore, this outer div is needed so that it remains in the document flow (and thus sync with the right section which has no position set other than static, which means both of them stay on the page -->
+  <div>
+    <div class = "left-outer">
+      <img class = "background-sidebar" src = "./background-image.jpg">
+
+      <div class = "logo-sidebar">
+        <img class = "logo" src = "./logo.png">
+        ODIN
+      </div>
+
+      <div class = "citation-image">
+        <p>
+          Photo by Halie West on <a href = "https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA" target="_blank" rel="noopener">Unsplash</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class = "flex-display right-outer">
+    <div class = "content">
+      <div>
+        <p>
+          This is not a real online service! You know you need something
+          like this in your real life to help you realized your deepest dreams.
+          Sign up <span class = "italic">now</span> to get started.
+        </p>
+        <p>
+          You <span class = "italic">know</span> you want to.
+        </p>
+      </div>
+
+      <form id = "registration" action = "example.com/path" method="post">
+        <legend>Let's do this!</legend>
+        <p><strong>All fields are required.</strong></p>
+        <div class = "div-row">
+          <div class = "div-input">
+            <label for = "first_name">FIRST NAME</label>
+            <input type = "text" id = "first_name" required/>
+          </div>
+
+          <div class = "div-input">
+            <label for = "last_name">LAST NAME</label>
+            <input type = "text" id = "last_name" required>
+          </div>
+        </div>
+
+        <div class = "div-row">
+          <div class = "div-input">
+            <label for = "email">EMAIL</label>
+            <input type = "email" id = "email" required>
+          </div>
+
+          <div class = "div-input">
+            <label for = "phone">PHONE NUMBER</label>
+            <input type = "tel" id = "phone" required>
+          </div>
+        </div>
+
+        <div class = "div-row">
+          <div class = "div-input">
+            <label for = "password">PASSWORD</label>
+            <input type = "password" id = "password" required>
+          </div>
+
+          <div class = "div-input">
+            <label for = "confirm_password">CONFIRM PASSWORD</label>
+            <input type = "password" id = "confirm_password" required>
+          </div>
+        </div>
+      </form>
+
+      <button form = "registration" type = "submit">Create Account</button>
+
+      <div>
+        <p>
+          Already have an account? <span>Log in</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
