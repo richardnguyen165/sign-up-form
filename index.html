@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SignUp Page</title>
   <link rel = "stylesheet" href = "./signup.css">
+
+  <!-- roboto custom font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,16 +14,21 @@
 <body>
   <!-- we need an outer div because the div that has left-outer causes it to be removed from document flow --> 
   <!-- therefore, this outer div is needed so that it remains in the document flow (and thus sync with the right section which has no position set other than static, which means both of them stay on the page -->
+
+  <!-- left section of the project -->
   <div>
-    <div class = "left-outer">
+    <div class = "flex-display left-outer">
+      <!-- background image -->
       <img class = "background-sidebar" src = "./background-image.jpg">
 
-      <div class = "logo-sidebar">
+      <!-- logo sidebar -->
+      <div class = "flex-display logo-sidebar">
         <img class = "logo" src = "./logo.png">
         ODIN
       </div>
 
-      <div class = "citation-image">
+      <!-- image citation -->
+      <div class = "flex-display citation-image">
         <p>
           Photo by Halie West on <a href = "https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA" target="_blank" rel="noopener">Unsplash</a>
         </p>
@@ -29,8 +36,10 @@
     </div>
   </div>
 
+  <!-- right section of the project -->
   <div class = "flex-display right-outer">
     <div class = "content">
+      <!-- top intro paragraph -->
       <div>
         <p>
           This is not a real online service! You know you need something
@@ -42,6 +51,7 @@
         </p>
       </div>
 
+      <!-- form -->
       <form id = "registration" action = "example.com/path" method="post">
         <legend>Let's do this!</legend>
         <p><strong>All fields are required.</strong></p>
@@ -84,6 +94,7 @@
 
       <button form = "registration" type = "submit">Create Account</button>
 
+      <!-- Bottom description -->
       <div>
         <p>
           Already have an account? <span>Log in</span>
